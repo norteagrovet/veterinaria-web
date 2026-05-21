@@ -8,19 +8,19 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{title} | Veterinaria</title>
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href={`${import.meta.env.BASE_URL}styles.css`} />
   </head>
 
   <body>
     <header>
-      <a class="logo" href="/">Veterinaria [Nombre]</a>
+      <a class="logo" href={import.meta.env.BASE_URL}>Veterinaria [Nombre]</a>
 
       <nav>
-        <a href="/">Inicio</a>
-        <a href="/nosotros">Nosotros</a>
-        <a href="/servicios">Servicios</a>
-        <a href="/productos">Productos</a>
-        <a href="/contacto">Contacto</a>
+        <a href={import.meta.env.BASE_URL}>Inicio</a>
+        <a href={`${import.meta.env.BASE_URL}nosotros`}>Nosotros</a>
+        <a href={`${import.meta.env.BASE_URL}servicios`}>Servicios</a>
+        <a href={`${import.meta.env.BASE_URL}productos`}>Productos</a>
+        <a href={`${import.meta.env.BASE_URL}contacto`}>Contacto</a>
       </nav>
     </header>
 
