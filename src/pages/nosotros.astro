@@ -3,13 +3,158 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Nosotros">
-  <h1>Nosotros</h1>
-  <p>
-    Somos una veterinaria dedicada al cuidado integral de perros, gatos y otras mascotas.
-  </p>
+  <section class="about-hero">
+    <div>
+      <p class="eyebrow">Nosotros</p>
+      <h1>Una veterinaria cercana, moderna y comprometida</h1>
+      <p class="hero-text">
+        En Norte Agroveterinaria acompañamos el cuidado de tus mascotas con atención
+        responsable, asesoramiento claro y productos pensados para su bienestar diario.
+      </p>
+    </div>
 
-  <h2>Nuestro equipo</h2>
-  <p>
-    Acá pueden ir los nombres de los veterinarios, su experiencia y una descripción breve.
-  </p>
+    <div class="image-placeholder about-photo">
+      <span>Placeholder imagen</span>
+      <small>Foto del equipo, fachada o interior de la veterinaria</small>
+    </div>
+  </section>
+
+  <section class="section split-section">
+    <div>
+      <p class="eyebrow">Nuestra forma de trabajar</p>
+      <h2>Cuidado, confianza y acompañamiento</h2>
+      <p>
+        Queremos que cada consulta sea clara y tranquila. Nuestro objetivo es ayudarte
+        a tomar buenas decisiones para la salud y el bienestar de tus animales, tanto
+        en la atención veterinaria como en la elección de productos.
+      </p>
+      <p>
+        Trabajamos con un enfoque cercano: escuchar, orientar y acompañar a cada familia
+        según las necesidades de su mascota.
+      </p>
+    </div>
+
+    <div class="simple-list">
+      <div>
+        <strong>Atención responsable</strong>
+        <span>Priorizamos el bienestar animal y la comunicación clara.</span>
+      </div>
+      <div>
+        <strong>Asesoramiento personalizado</strong>
+        <span>Te ayudamos a elegir productos y cuidados adecuados.</span>
+      </div>
+      <div>
+        <strong>Compromiso local</strong>
+        <span>Una veterinaria pensada para acompañar a las familias de Resistencia.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <p class="eyebrow">El equipo</p>
+      <h2>Personas detrás del cuidado</h2>
+      <p>
+        Acá podemos presentar a los veterinarios y al equipo de atención. Cuando tengas
+        los nombres, matrículas, especialidades o fotos, lo dejamos más personalizado.
+      </p>
+    </div>
+
+    <div class="team-grid">
+      <article class="team-card">
+        <div class="person-placeholder">
+          <span>Foto</span>
+        </div>
+        <h3>Nombre del veterinario/a</h3>
+        <p class="team-role">Veterinario/a</p>
+        <p>
+          Breve descripción sobre su experiencia, áreas de interés o forma de trabajo.
+        </p>
+      </article>
+
+      <article class="team-card">
+        <div class="person-placeholder">
+          <span>Foto</span>
+        </div>
+        <h3>Nombre del veterinario/a</h3>
+        <p class="team-role">Veterinario/a</p>
+        <p>
+          Breve descripción sobre su experiencia, áreas de interés o forma de trabajo.
+        </p>
+      </article>
+
+      <article class="team-card">
+        <div class="person-placeholder">
+          <span>Foto</span>
+        </div>
+        <h3>Equipo de atención</h3>
+        <p class="team-role">Atención y asesoramiento</p>
+        <p>
+          Espacio para presentar a quienes reciben consultas, orientan y acompañan en el local.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section values-section">
+    <div class="section-heading">
+      <p class="eyebrow">Qué nos importa</p>
+      <h2>Una experiencia simple y humana</h2>
+    </div>
+
+    <div class="values-grid">
+      <article>
+        <span>01</span>
+        <h3>Escuchar primero</h3>
+        <p>
+          Entender qué le pasa a tu mascota y qué necesitás como familia.
+        </p>
+      </article>
+
+      <article>
+        <span>02</span>
+        <h3>Explicar con claridad</h3>
+        <p>
+          Brindar orientación simple, honesta y fácil de entender.
+        </p>
+      </article>
+
+      <article>
+        <span>03</span>
+        <h3>Acompañar en el tiempo</h3>
+        <p>
+          Ayudar en controles, cuidados preventivos y consultas cotidianas.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section split-section reverse">
+    <div>
+      <p class="eyebrow">El local</p>
+      <h2>Un espacio para atención y productos</h2>
+      <p>
+        Además de la atención veterinaria, contamos con productos para el cuidado diario:
+        accesorios, juguetes, higiene y artículos seleccionados para mascotas.
+      </p>
+      <a class="button" href="../productos">Ver productos</a>
+    </div>
+
+    <div class="image-placeholder about-photo-small">
+      <span>Placeholder imagen</span>
+      <small>Foto del local, góndolas o productos destacados</small>
+    </div>
+  </section>
+
+  <section class="section contact-banner">
+    <div>
+      <p class="eyebrow">Norte Agroveterinaria</p>
+      <h2>¿Querés comunicarte con nosotros?</h2>
+      <p>
+        Escribinos por WhatsApp o acercate al local en Resistencia, Chaco.
+      </p>
+    </div>
+
+    <a class="button" href="../contacto">Ir a contacto</a>
+  </section>
 </Layout>
