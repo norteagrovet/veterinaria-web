@@ -1489,3 +1489,21 @@ footer {
     min-height: 280px;
   }
 }
+
+.home-logo {
+  width: 110px;
+  height: 110px;
+  border-radius: 28px;
+  background: white;
+  padding: 12px;
+  box-shadow: 0 16px 34px rgba(15, 118, 110, 0.14);
+  display: grid;
+  place-items: center;
+  margin-bottom: 28px;
+}
+
+.home-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
