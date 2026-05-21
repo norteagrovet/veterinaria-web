@@ -7,14 +7,153 @@ const servicios = Object.values(
 ---
 
 <Layout title="Servicios">
-  <h1>Servicios</h1>
+  <section class="services-hero">
+    <div>
+      <p class="eyebrow">Servicios</p>
+      <h1>Atención veterinaria urbana y rural</h1>
+      <p class="hero-text">
+        En Norte Agroveterinaria acompañamos el cuidado de animales de compañía
+        y también brindamos atención orientada al ámbito agropecuario, con visitas
+        a campo y asesoramiento sanitario.
+      </p>
 
-  <div class="grid">
-    {servicios.map((servicio: any) => (
-      <article class="card">
-        <h2>{servicio.frontmatter.nombre}</h2>
-        <p>{servicio.frontmatter.descripcion}</p>
+      <div class="hero-actions">
+        <a class="button" href="../contacto">Consultar por WhatsApp</a>
+        <a class="button button-secondary" href="#servicios">Ver servicios</a>
+      </div>
+    </div>
+
+    <div class="image-placeholder services-photo">
+      <span>Placeholder imagen</span>
+      <small>Foto de veterinario/a en campo, animales o atención clínica</small>
+    </div>
+  </section>
+
+  <section class="section services-intro">
+    <div class="section-heading">
+      <p class="eyebrow">Qué hacemos</p>
+      <h2>Cuidado integral para distintos tipos de animales</h2>
+      <p>
+        Combinamos atención clínica para perros y gatos con experiencia en animales
+        de campo, prevención sanitaria y acompañamiento a productores.
+      </p>
+    </div>
+
+    <div class="service-pillars">
+      <article>
+        <div class="icon-circle">🐶</div>
+        <h3>Animales de compañía</h3>
+        <p>
+          Consultas, vacunación, desparasitación, controles y orientación para perros y gatos.
+        </p>
       </article>
-    ))}
-  </div>
+
+      <article>
+        <div class="icon-circle">🐄</div>
+        <h3>Animales de campo</h3>
+        <p>
+          Atención y seguimiento sanitario para animales rurales, con posibilidad de visitas a campo.
+        </p>
+      </article>
+
+      <article>
+        <div class="icon-circle">🌾</div>
+        <h3>Asesoramiento agropecuario</h3>
+        <p>
+          Orientación práctica para el manejo sanitario, prevención y cuidado animal en contextos productivos.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section split-section" id="servicios">
+    <div>
+      <p class="eyebrow">Servicios disponibles</p>
+      <h2>Atención según la necesidad de cada animal</h2>
+      <p>
+        Estos son algunos de los servicios principales. Más adelante podemos ajustar
+        esta lista con los nombres exactos, detalles y condiciones de atención que
+        prefieran comunicar.
+      </p>
+    </div>
+
+    <div class="services-dynamic-list">
+      {servicios.map((servicio: any) => (
+        <article>
+          <h3>{servicio.frontmatter.nombre}</h3>
+          <p>{servicio.frontmatter.descripcion}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section field-section">
+    <div class="field-card large">
+      <p class="eyebrow">Visitas a campo</p>
+      <h2>Atención veterinaria donde se necesita</h2>
+      <p>
+        Para animales de campo, la atención muchas veces requiere observar el contexto:
+        instalaciones, manejo, alimentación, estado general y dinámica del rodeo o grupo animal.
+      </p>
+      <p>
+        Por eso, Norte Agroveterinaria también puede orientar consultas vinculadas
+        al ámbito rural y coordinar visitas según disponibilidad.
+      </p>
+      <a class="button" href="../contacto">Consultar visita</a>
+    </div>
+
+    <div class="field-card image-card">
+      <div class="image-placeholder field-placeholder">
+        <span>Placeholder imagen</span>
+        <small>Foto en campo, manga, corral o animales rurales</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="section process-section">
+    <div class="section-heading">
+      <p class="eyebrow">Cómo consultar</p>
+      <h2>Un proceso simple</h2>
+    </div>
+
+    <div class="process-grid">
+      <article>
+        <span>01</span>
+        <h3>Escribinos</h3>
+        <p>
+          Contanos qué animal necesitás atender y cuál es la consulta principal.
+        </p>
+      </article>
+
+      <article>
+        <span>02</span>
+        <h3>Evaluamos la situación</h3>
+        <p>
+          Te orientamos sobre próximos pasos, horarios o necesidad de visita.
+        </p>
+      </article>
+
+      <article>
+        <span>03</span>
+        <h3>Coordinamos atención</h3>
+        <p>
+          Definimos si corresponde atención en local, seguimiento o visita a campo.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section contact-banner">
+    <div>
+      <p class="eyebrow">Norte Agroveterinaria</p>
+      <h2>¿Querés consultar por un servicio?</h2>
+      <p>
+        Escribinos por WhatsApp y contanos qué necesitás. Te orientamos según el caso.
+      </p>
+    </div>
+
+    <a class="button" href="https://wa.me/5493624536625" target="_blank">
+      Consultar ahora
+    </a>
+  </section>
 </Layout>
