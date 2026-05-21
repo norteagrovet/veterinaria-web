@@ -27,8 +27,8 @@ const url = (path) => {
     <div class="hero-overlay"></div>
 
     <div class="home-visual-content">
-      <div class="home-logo-placeholder">
-        <span>Logo</span>
+      <div class="home-logo">
+        <img src={url("uploads/mini_norte_logo_claro.png")} alt="Logo de Norte Agroveterinaria" />
       </div>
 
       <p class="eyebrow">Veterinaria urbana y rural</p>
@@ -185,9 +185,16 @@ const url = (path) => {
       </div>
     </div>
 
-    <div class="map-placeholder home-map-placeholder">
-      <span>Mapa / imagen exterior</span>
-      <small>Acá podemos poner mapa o foto del frente del local</small>
+    <div class="map-embed">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4358.382213323981!2d-58.96483372367186!3d-27.40535671396935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94450dd7687115ad%3A0x358ea368edac9b00!2sNorte%20Agroveterinaria!5e1!3m2!1sen!2sar!4v1779337402657!5m2!1sen!2sar"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
   </section>
 
