@@ -1,0 +1,64 @@
+media:
+  input: public/uploads
+  output: /uploads
+
+content:
+  - name: productos
+    label: Productos
+    type: collection
+    path: src/content/productos
+    filename: "{fields.nombre}.md"
+    fields:
+      - name: nombre
+        label: Nombre
+        type: string
+        required: true
+
+      - name: descripcion
+        label: Descripción
+        type: text
+
+      - name: precio
+        label: Precio
+        type: number
+        required: true
+
+      - name: estado
+        label: Estado
+        type: select
+        options:
+          values:
+            - Disponible
+            - Consultar disponibilidad
+            - A pedido
+            - Sin stock
+
+      - name: categoria
+        label: Categoría
+        type: select
+        options:
+          values:
+            - Alimentos
+            - Accesorios
+            - Juguetes
+            - Higiene
+            - Otros
+
+      - name: imagen
+        label: Imagen
+        type: image
+
+  - name: servicios
+    label: Servicios
+    type: collection
+    path: src/content/servicios
+    filename: "{fields.nombre}.md"
+    fields:
+      - name: nombre
+        label: Nombre
+        type: string
+        required: true
+
+      - name: descripcion
+        label: Descripción
+        type: text

@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const productos = Object.values(
+  import.meta.glob("../content/productos/*.md", { eager: true })
+);
+---
+
+<Layout title="Productos">
+  <h1>Productos</h1>
+  <p>Consultá disponibilidad y precios por WhatsApp.</p>
+
+  <div class="grid">
+    {productos.map((producto: any) => {
+      const p = producto.frontmatter;
+      const mensaje = encodeURIComponent(`Hola! Quería consultar por el producto: ${p.nombre}`);
+      const whatsapp = `https://wa.me/549XXXXXXXXXX?text=${mensaje}`;
+
+      return (
+        <article class="card">
+          {p.imagen && <img src={p.imagen} alt={p.nombre} />}
+          <h2>{p.nombre}</h2>
+          <p>{p.descripcion}</p>
+          <p><strong>${p.precio}</strong></p>
+          <p>{p.estado}</p>
+          <a class="button" href={whatsapp} target="_blank">Consultar por WhatsApp</a>
+        </article>
+      );
+    })}
+  </div>
+</Layout>
