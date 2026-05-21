@@ -1,8 +1,8 @@
 ---
-nombre: Pelota para perro
-descripcion: Gran pelota verde indestructible
-precio: 5000000
+nombre: Pelota
+descripcion: Pelota de perro de color verde y azul.
+precio: 8.5
 estado: Disponible
 categoria: Juguetes
-imagen: /uploads/33729-140932-26557_1_g.jpg
+imagen: /uploads/pelota_perro.webp
 ---
