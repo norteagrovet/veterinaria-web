@@ -3,13 +3,130 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Contacto">
-  <h1>Contacto</h1>
+  <section class="contact-hero">
+    <div>
+      <p class="eyebrow">Contacto</p>
+      <h1>Estamos para ayudarte</h1>
+      <p class="hero-text">
+        Consultanos por atención veterinaria, disponibilidad de productos o cualquier duda
+        sobre el cuidado de tus mascotas.
+      </p>
 
-  <p><strong>WhatsApp:</strong> +54 9 362 4536625</p>
-  <p><strong>Dirección:</strong> Benjamín Zorrilla 4235, Resistencia, Chaco</p>
-  <p><strong>Horario:</strong> Lunes a viernes de 9 a 12:30 y de 17 a 21 y Sábados de 9 a 13</p>
+      <div class="hero-actions">
+        <a class="button" href="https://wa.me/5493624536625" target="_blank">
+          Escribir por WhatsApp
+        </a>
+        <a class="button button-secondary" href="#ubicacion">
+          Ver ubicación
+        </a>
+      </div>
+    </div>
 
-  <a class="button" href="https://wa.me/5493624536625" target="_blank">
-    Escribir por WhatsApp
-  </a>
+    <div class="image-placeholder contact-photo">
+      <span>Placeholder imagen</span>
+      <small>Foto de la veterinaria, fachada o equipo</small>
+    </div>
+  </section>
+
+  <section class="contact-grid">
+    <article class="contact-card">
+      <div class="icon-circle">💬</div>
+      <h2>WhatsApp</h2>
+      <p>Escribinos para consultas, horarios o disponibilidad de productos.</p>
+      <a href="https://wa.me/5493624536625" target="_blank">
+        +54 9 362 4536625
+      </a>
+    </article>
+
+    <article class="contact-card">
+      <div class="icon-circle">📍</div>
+      <h2>Dirección</h2>
+      <p>Benjamín Zorrilla 4235, Resistencia, Chaco.</p>
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=Benjam%C3%ADn%20Zorrilla%204235%2C%20Resistencia%2C%20Chaco"
+        target="_blank"
+      >
+        Abrir en Google Maps
+      </a>
+    </article>
+
+    <article class="contact-card">
+      <div class="icon-circle">🕘</div>
+      <h2>Horarios</h2>
+      <p>
+        Lunes a viernes de 9:00 a 12:30 y de 17:00 a 21:00.
+        Sábados de 9:00 a 13:00.
+      </p>
+    </article>
+  </section>
+
+  <section class="section split-section" id="ubicacion">
+    <div>
+      <p class="eyebrow">Ubicación</p>
+      <h2>Visitá Norte Agroveterinaria</h2>
+      <p>
+        Estamos en Resistencia, Chaco. Podés acercarte al local o escribirnos antes
+        por WhatsApp para consultar por productos, horarios o atención.
+      </p>
+
+      <a
+        class="button"
+        href="https://www.google.com/maps/search/?api=1&query=Benjam%C3%ADn%20Zorrilla%204235%2C%20Resistencia%2C%20Chaco"
+        target="_blank"
+      >
+        Cómo llegar
+      </a>
+    </div>
+
+    <div class="map-placeholder">
+      <span>Mapa / ubicación</span>
+      <small>
+        Acá después podemos poner un mapa embebido de Google Maps.
+      </small>
+    </div>
+  </section>
+
+  <section class="section split-section reverse">
+    <div>
+      <p class="eyebrow">Atención</p>
+      <h2>Consultas rápidas por WhatsApp</h2>
+      <p>
+        Para agilizar la respuesta, podés escribirnos contando qué necesitás:
+        atención veterinaria, productos, accesorios, alimentos o artículos de higiene.
+      </p>
+
+      <a class="button" href="https://wa.me/5493624536625" target="_blank">
+        Enviar consulta
+      </a>
+    </div>
+
+    <div class="simple-list">
+      <div>
+        <strong>Consultas veterinarias</strong>
+        <span>Escribinos para consultar disponibilidad y horarios.</span>
+      </div>
+      <div>
+        <strong>Productos</strong>
+        <span>Preguntá por precio, stock o recomendaciones.</span>
+      </div>
+      <div>
+        <strong>Ubicación</strong>
+        <span>Estamos en Benjamín Zorrilla 4235, Resistencia.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact-banner">
+    <div>
+      <p class="eyebrow">Norte Agroveterinaria</p>
+      <h2>¿Querés hacer una consulta ahora?</h2>
+      <p>
+        Escribinos por WhatsApp y te respondemos a la brevedad.
+      </p>
+    </div>
+
+    <a class="button" href="https://wa.me/5493624536625" target="_blank">
+      Escribir por WhatsApp
+    </a>
+  </section>
 </Layout>
