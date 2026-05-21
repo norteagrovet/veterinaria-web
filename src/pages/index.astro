@@ -10,10 +10,118 @@ const url = (path) => {
 };
 ---
 
-<Layout title="Veterinaria">
-  <section class="hero">
-    <h1>Norte Agroveterinaria</h1>
-    <p>Atención veterinaria, productos y cuidado para tus mascotas.</p>
-    <a class="button" href={url("contacto")}>Contactanos</a>
+<Layout title="Inicio">
+  <section class="hero hero-home">
+    <div class="hero-content">
+      <p class="eyebrow">Veterinaria y productos para mascotas</p>
+      <h1>Norte Agroveterinaria</h1>
+      <p class="hero-text">
+        Atención veterinaria, asesoramiento responsable y productos seleccionados
+        para el cuidado diario de tus mascotas.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button" href={url("contacto")}>Contactanos</a>
+        <a class="button button-secondary" href={url("productos")}>Ver productos</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h2>Cuidamos a quienes te acompañan todos los días</h2>
+      <p>
+        Consultas, orientación y productos para perros, gatos y animales de compañía.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <p class="eyebrow">Por qué elegirnos</p>
+      <h2>Atención cercana, clara y responsable</h2>
+    </div>
+
+    <div class="grid">
+      <article class="card">
+        <div class="icon-circle">🐾</div>
+        <h3>Atención veterinaria</h3>
+        <p>
+          Consultas, controles y seguimiento para acompañar la salud de tus mascotas.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon-circle">🦴</div>
+        <h3>Productos seleccionados</h3>
+        <p>
+          Accesorios, juguetes, higiene y artículos para el cuidado cotidiano.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="icon-circle">💬</div>
+        <h3>Asesoramiento personalizado</h3>
+        <p>
+          Te ayudamos a elegir lo que mejor se adapta a las necesidades de tu mascota.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section split-section">
+    <div>
+      <p class="eyebrow">Servicios</p>
+      <h2>Servicios veterinarios</h2>
+      <p>
+        Brindamos atención para el cuidado general de perros, gatos y animales de compañía.
+        Podés consultar por controles, vacunación, desparasitación y orientación sanitaria.
+      </p>
+      <a class="button" href={url("servicios")}>Ver servicios</a>
+    </div>
+
+    <div class="simple-list">
+      <div>
+        <strong>Consulta general</strong>
+        <span>Atención clínica y orientación inicial.</span>
+      </div>
+      <div>
+        <strong>Vacunación</strong>
+        <span>Seguimiento del calendario sanitario.</span>
+      </div>
+      <div>
+        <strong>Desparasitación</strong>
+        <span>Cuidado preventivo para perros y gatos.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section split-section reverse">
+    <div>
+      <p class="eyebrow">Productos</p>
+      <h2>Productos para el cuidado diario</h2>
+      <p>
+        Encontrá accesorios, juguetes, artículos de higiene y otros productos para tus mascotas.
+        Consultá disponibilidad directamente por WhatsApp.
+      </p>
+      <a class="button" href={url("productos")}>Ver productos</a>
+    </div>
+
+    <div class="catalog-preview">
+      <div>Alimentos</div>
+      <div>Accesorios</div>
+      <div>Juguetes</div>
+      <div>Higiene</div>
+    </div>
+  </section>
+
+  <section class="section contact-banner">
+    <div>
+      <p class="eyebrow">Contacto</p>
+      <h2>¿Tenés una consulta?</h2>
+      <p>
+        Escribinos por WhatsApp para consultar horarios, productos disponibles o coordinar una atención.
+      </p>
+    </div>
+
+    <a class="button" href={url("contacto")}>Ir a contacto</a>
   </section>
 </Layout>
