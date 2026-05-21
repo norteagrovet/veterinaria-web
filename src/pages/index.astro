@@ -11,86 +11,135 @@ const url = (path) => {
 ---
 
 <Layout title="Inicio">
-  <section class="hero hero-home">
-    <div class="hero-content">
-      <p class="eyebrow">Veterinaria y productos para mascotas</p>
+  <section class="home-visual-hero">
+    <div class="hero-slider">
+      <div class="hero-slide slide-one">
+        <span>Foto principal del local / fachada</span>
+      </div>
+      <div class="hero-slide slide-two">
+        <span>Foto con perros y gatos</span>
+      </div>
+      <div class="hero-slide slide-three">
+        <span>Foto de atención en campo</span>
+      </div>
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="home-visual-content">
+      <div class="home-logo-placeholder">
+        <span>Logo</span>
+      </div>
+
+      <p class="eyebrow">Veterinaria urbana y rural</p>
+
       <h1>Norte Agroveterinaria</h1>
+
       <p class="hero-text">
-        Atención veterinaria, asesoramiento responsable y productos seleccionados
-        para el cuidado diario de tus mascotas.
+        Atención veterinaria para animales de compañía, visitas a campo y productos
+        seleccionados para el cuidado diario de tus animales.
       </p>
 
       <div class="hero-actions">
         <a class="button" href={url("contacto")}>Contactanos</a>
-        <a class="button button-secondary" href={url("productos")}>Ver productos</a>
+        <a class="button button-secondary hero-secondary" href={url("servicios")}>
+          Ver servicios
+        </a>
       </div>
     </div>
+  </section>
 
-    <div class="hero-card">
-      <h2>Cuidamos a quienes te acompañan todos los días</h2>
+  <section class="home-quick-info">
+    <article>
+      <span>🐶</span>
+      <strong>Animales de compañía</strong>
+      <p>Atención para perros, gatos y mascotas.</p>
+    </article>
+
+    <article>
+      <span>🐄</span>
+      <strong>Animales de campo</strong>
+      <p>Consultas rurales y visitas según disponibilidad.</p>
+    </article>
+
+    <article>
+      <span>🦴</span>
+      <strong>Productos</strong>
+      <p>Accesorios, higiene, juguetes y más.</p>
+    </article>
+  </section>
+
+  <section class="section split-section">
+    <div>
+      <p class="eyebrow">Quiénes somos</p>
+      <h2>Cuidado cercano para animales y familias</h2>
       <p>
-        Consultas, orientación y productos para perros, gatos y animales de compañía.
+        En Norte Agroveterinaria combinamos atención veterinaria, asesoramiento claro
+        y experiencia en el ámbito agropecuario. Trabajamos para acompañarte tanto
+        en el cuidado cotidiano de tus mascotas como en consultas vinculadas al campo.
       </p>
+
+      <a class="button" href={url("nosotros")}>Conocenos</a>
+    </div>
+
+    <div class="image-placeholder home-about-photo">
+      <span>Placeholder imagen</span>
+      <small>Foto del equipo, local o atención veterinaria</small>
     </div>
   </section>
 
   <section class="section">
     <div class="section-heading">
-      <p class="eyebrow">Por qué elegirnos</p>
-      <h2>Atención cercana, clara y responsable</h2>
+      <p class="eyebrow">Servicios</p>
+      <h2>Atención veterinaria urbana y rural</h2>
+      <p>
+        Una veterinaria pensada para acompañar distintas necesidades: desde controles
+        clínicos de perros y gatos hasta consultas relacionadas con animales de campo.
+      </p>
     </div>
 
-    <div class="grid">
-      <article class="card">
-        <div class="icon-circle">🐾</div>
-        <h3>Atención veterinaria</h3>
-        <p>
-          Consultas, controles y seguimiento para acompañar la salud de tus mascotas.
-        </p>
+    <div class="home-services-grid">
+      <article>
+        <div class="icon-circle">🩺</div>
+        <h3>Consulta general</h3>
+        <p>Atención clínica, controles y orientación sanitaria.</p>
       </article>
 
-      <article class="card">
-        <div class="icon-circle">🦴</div>
-        <h3>Productos seleccionados</h3>
-        <p>
-          Accesorios, juguetes, higiene y artículos para el cuidado cotidiano.
-        </p>
+      <article>
+        <div class="icon-circle">💉</div>
+        <h3>Vacunación y prevención</h3>
+        <p>Seguimiento del cuidado preventivo de tus animales.</p>
       </article>
 
-      <article class="card">
-        <div class="icon-circle">💬</div>
-        <h3>Asesoramiento personalizado</h3>
-        <p>
-          Te ayudamos a elegir lo que mejor se adapta a las necesidades de tu mascota.
-        </p>
+      <article>
+        <div class="icon-circle">🌾</div>
+        <h3>Visitas a campo</h3>
+        <p>Consultas rurales y atención en contexto productivo.</p>
       </article>
+    </div>
+
+    <div class="center-action">
+      <a class="button" href={url("servicios")}>Ver todos los servicios</a>
     </div>
   </section>
 
-  <section class="section split-section">
-    <div>
-      <p class="eyebrow">Servicios</p>
-      <h2>Servicios veterinarios</h2>
-      <p>
-        Brindamos atención para el cuidado general de perros, gatos y animales de compañía.
-        Podés consultar por controles, vacunación, desparasitación y orientación sanitaria.
-      </p>
-      <a class="button" href={url("servicios")}>Ver servicios</a>
+  <section class="section home-photo-strip">
+    <div class="photo-placeholder strip-large">
+      <span>Foto local</span>
+      <small>Fachada o interior</small>
     </div>
 
-    <div class="simple-list">
-      <div>
-        <strong>Consulta general</strong>
-        <span>Atención clínica y orientación inicial.</span>
-      </div>
-      <div>
-        <strong>Vacunación</strong>
-        <span>Seguimiento del calendario sanitario.</span>
-      </div>
-      <div>
-        <strong>Desparasitación</strong>
-        <span>Cuidado preventivo para perros y gatos.</span>
-      </div>
+    <div class="photo-placeholder strip-tall">
+      <span>Foto campo</span>
+      <small>Animales rurales</small>
+    </div>
+
+    <div class="photo-placeholder strip-small">
+      <span>Foto productos</span>
+    </div>
+
+    <div class="photo-placeholder strip-small">
+      <span>Foto mascotas</span>
     </div>
   </section>
 
@@ -99,9 +148,11 @@ const url = (path) => {
       <p class="eyebrow">Productos</p>
       <h2>Productos para el cuidado diario</h2>
       <p>
-        Encontrá accesorios, juguetes, artículos de higiene y otros productos para tus mascotas.
-        Consultá disponibilidad directamente por WhatsApp.
+        En nuestro catálogo podés encontrar productos para mascotas y animales:
+        accesorios, juguetes, higiene y artículos seleccionados. Cada producto se
+        puede consultar directamente por WhatsApp.
       </p>
+
       <a class="button" href={url("productos")}>Ver productos</a>
     </div>
 
@@ -113,15 +164,44 @@ const url = (path) => {
     </div>
   </section>
 
+  <section class="section home-location-card">
+    <div>
+      <p class="eyebrow">Dónde estamos</p>
+      <h2>En Resistencia, Chaco</h2>
+      <p>
+        Estamos en Benjamín Zorrilla 4235. Podés escribirnos por WhatsApp para
+        consultar horarios, productos disponibles o coordinar una atención.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button" href={url("contacto")}>Ver contacto</a>
+        <a
+          class="button button-secondary"
+          href="https://www.google.com/maps/search/?api=1&query=Benjam%C3%ADn%20Zorrilla%204235%2C%20Resistencia%2C%20Chaco"
+          target="_blank"
+        >
+          Cómo llegar
+        </a>
+      </div>
+    </div>
+
+    <div class="map-placeholder home-map-placeholder">
+      <span>Mapa / imagen exterior</span>
+      <small>Acá podemos poner mapa o foto del frente del local</small>
+    </div>
+  </section>
+
   <section class="section contact-banner">
     <div>
-      <p class="eyebrow">Contacto</p>
-      <h2>¿Tenés una consulta?</h2>
+      <p class="eyebrow">Norte Agroveterinaria</p>
+      <h2>¿Querés hacer una consulta?</h2>
       <p>
-        Escribinos por WhatsApp para consultar horarios, productos disponibles o coordinar una atención.
+        Escribinos por WhatsApp y contanos qué necesitás. Te orientamos según el caso.
       </p>
     </div>
 
-    <a class="button" href={url("contacto")}>Ir a contacto</a>
+    <a class="button" href="https://wa.me/5493624536625" target="_blank">
+      Escribir por WhatsApp
+    </a>
   </section>
 </Layout>
