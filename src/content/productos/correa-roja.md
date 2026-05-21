@@ -1,8 +1,8 @@
 ---
-nombre: "Correa roja para perro"
-descripcion: "Correa resistente para perros medianos y grandes."
-precio: 4500
-estado: "Disponible"
-categoria: "Accesorios"
-imagen: "/uploads/correa-roja.jpg"
+nombre: Drontal Plus
+descripcion: Medicamento Drontal Plus con 2 tabletas.
+precio: 25.999
+estado: Disponible
+categoria: Otros
+imagen: /uploads/drontal_plus.png
 ---
