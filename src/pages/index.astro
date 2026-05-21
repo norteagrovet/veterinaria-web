@@ -1,11 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const base = import.meta.env.BASE_URL;
+
+const url = (path) => {
+  const cleanBase = base.endsWith("/") ? base : `${base}/`;
+  const cleanPath = path.replace(/^\/+/, "");
+  return `${cleanBase}${cleanPath}`;
+};
 ---
 
 <Layout title="Veterinaria">
   <section class="hero">
     <h1>Veterinaria [Nombre]</h1>
     <p>Atención veterinaria, productos y cuidado para tus mascotas.</p>
-    <a class="button" href="/contacto">Contactanos</a>
+    <a class="button" href={url("contacto")}>Contactanos</a>
   </section>
 </Layout>

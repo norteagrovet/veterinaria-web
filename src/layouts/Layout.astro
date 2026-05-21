@@ -1,5 +1,13 @@
 ---
 const { title } = Astro.props;
+
+const base = import.meta.env.BASE_URL;
+
+const url = (path) => {
+  const cleanBase = base.endsWith("/") ? base : `${base}/`;
+  const cleanPath = path.replace(/^\/+/, "");
+  return `${cleanBase}${cleanPath}`;
+};
 ---
 
 <!doctype html>
@@ -8,19 +16,19 @@ const { title } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{title} | Veterinaria</title>
-    <link rel="stylesheet" href={`${import.meta.env.BASE_URL}styles.css`} />
+    <link rel="stylesheet" href={url("styles.css")} />
   </head>
 
   <body>
     <header>
-      <a class="logo" href={import.meta.env.BASE_URL}>Veterinaria [Nombre]</a>
+      <a class="logo" href={base}>Veterinaria [Nombre]</a>
 
       <nav>
-        <a href={import.meta.env.BASE_URL}>Inicio</a>
-        <a href={`${import.meta.env.BASE_URL}nosotros`}>Nosotros</a>
-        <a href={`${import.meta.env.BASE_URL}servicios`}>Servicios</a>
-        <a href={`${import.meta.env.BASE_URL}productos`}>Productos</a>
-        <a href={`${import.meta.env.BASE_URL}contacto`}>Contacto</a>
+        <a href={base}>Inicio</a>
+        <a href={url("nosotros")}>Nosotros</a>
+        <a href={url("servicios")}>Servicios</a>
+        <a href={url("productos")}>Productos</a>
+        <a href={url("contacto")}>Contacto</a>
       </nav>
     </header>
 
