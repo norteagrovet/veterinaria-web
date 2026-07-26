@@ -20,8 +20,12 @@ content:
 
       - name: precio
         label: Precio
-        type: number
+        type: string
         required: true
+        description: "Ingresar sin el signo $ y con puntos para los miles. Ejemplo: 8.500"
+        pattern:
+          regex: "^[0-9]{1,3}(\\.[0-9]{3})*$"
+          message: "Usá el formato 8.500 o 25.999, sin escribir el signo $."
 
       - name: estado
         label: Estado
