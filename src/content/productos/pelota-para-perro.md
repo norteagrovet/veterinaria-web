@@ -1,7 +1,7 @@
 ---
 nombre: Pelota
 descripcion: Pelota de perro de color verde y azul.
-precio: 8.5
+precio: "8.500"
 estado: Disponible
 categoria: Juguetes
 resaltar: false
