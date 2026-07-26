@@ -12,20 +12,22 @@ const servicios = Object.values(
       <p class="eyebrow">Servicios</p>
       <h1>Atención veterinaria urbana y rural</h1>
       <p class="hero-text">
-        En Norte Agroveterinaria acompañamos el cuidado de animales de compañía
-        y también brindamos atención orientada al ámbito agropecuario, con visitas
-        a campo y asesoramiento sanitario.
+        En Norte Agroveterinaria acompañamos el cuidado de tus animales y
+        hogar con atención responsable, asesoramiento claro y productos pensados
+        para su bienestar diario.
       </p>
 
       <div class="hero-actions">
         <a class="button" href="../contacto">Consultar por WhatsApp</a>
-        <a class="button button-secondary" href="#servicios">Ver servicios</a>
       </div>
     </div>
 
-    <div class="image-placeholder services-photo">
-      <span>Placeholder imagen</span>
-      <small>Foto de veterinario/a en campo, animales o atención clínica</small>
+    <div class="services-photo">
+      <img
+        src={`${import.meta.env.BASE_URL}uploads/fotos_decorativas/consultorio.jpeg`}
+        alt="Atención veterinaria de Norte Agroveterinaria"
+        loading="lazy"
+      />
     </div>
   </section>
 
@@ -63,50 +65,14 @@ const servicios = Object.values(
           Orientación práctica para el manejo sanitario, prevención y cuidado animal en contextos productivos.
         </p>
       </article>
-    </div>
-  </section>
 
-  <section class="section split-section" id="servicios">
-    <div>
-      <p class="eyebrow">Servicios disponibles</p>
-      <h2>Atención según la necesidad de cada animal</h2>
-      <p>
-        Estos son algunos de los servicios principales. Más adelante podemos ajustar
-        esta lista con los nombres exactos, detalles y condiciones de atención que
-        prefieran comunicar.
-      </p>
-    </div>
-
-    <div class="services-dynamic-list">
-      {servicios.map((servicio: any) => (
-        <article>
-          <h3>{servicio.frontmatter.nombre}</h3>
-          <p>{servicio.frontmatter.descripcion}</p>
-        </article>
-      ))}
-    </div>
-  </section>
-
-  <section class="section field-section">
-    <div class="field-card large">
-      <p class="eyebrow">Visitas a campo</p>
-      <h2>Atención veterinaria donde se necesita</h2>
-      <p>
-        Para animales de campo, la atención muchas veces requiere observar el contexto:
-        instalaciones, manejo, alimentación, estado general y dinámica del rodeo o grupo animal.
-      </p>
-      <p>
-        Por eso, Norte Agroveterinaria también puede orientar consultas vinculadas
-        al ámbito rural y coordinar visitas según disponibilidad.
-      </p>
-      <a class="button" href="../contacto">Consultar visita</a>
-    </div>
-
-    <div class="field-card image-card">
-      <div class="image-placeholder field-placeholder">
-        <span>Placeholder imagen</span>
-        <small>Foto en campo, manga, corral o animales rurales</small>
-      </div>
+      <article>
+        <div class="icon-circle">🏠</div>
+        <h3>Asesoramiento para el hogar</h3>
+        <p>
+          Control y manejo de plagas dentro del hogar.
+        </p>
+      </article>
     </div>
   </section>
 

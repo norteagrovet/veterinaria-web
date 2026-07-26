@@ -15,7 +15,12 @@ const url = (path) => {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>{title} | Veterinaria</title>
+    <title>Norte | {title}</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href={url("uploads/mini_norte_logo_oscuro.png")}
+    />
     <link rel="stylesheet" href={url("styles.css")} />
   </head>
 
@@ -25,7 +30,6 @@ const url = (path) => {
 
       <nav>
         <a href={base}>Inicio</a>
-        <a href={url("nosotros")}>Nosotros</a>
         <a href={url("servicios")}>Servicios</a>
         <a href={url("productos")}>Productos</a>
         <a href={url("contacto")}>Contacto</a>

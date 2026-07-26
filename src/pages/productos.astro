@@ -9,17 +9,24 @@ const url = (path) => {
   return `${cleanBase}${cleanPath}`;
 };
 
-const productos = Object.values(
+const productosSinOrdenar: any[] = Object.values(
   import.meta.glob("../content/productos/*.md", { eager: true })
 );
 
 const categorias = [
   ...new Set(
-    productos
+    productosSinOrdenar
       .map((producto: any) => producto.frontmatter.categoria)
       .filter(Boolean)
   ),
 ];
+
+const productos = [...productosSinOrdenar].sort((a: any, b: any) => {
+  const aResaltado = a.frontmatter?.resaltar === true ? 1 : 0;
+  const bResaltado = b.frontmatter?.resaltar === true ? 1 : 0;
+
+  return bResaltado - aResaltado;
+});
 ---
 
 <Layout title="Productos">
@@ -83,6 +90,7 @@ const categorias = [
       const categoria = p.categoria ?? "Otros";
       const estado = p.estado ?? "Consultar disponibilidad";
       const precio = p.precio ?? "";
+      const esResaltado = p.resaltar === true;
 
       const mensaje = encodeURIComponent(
         `Hola! Quería consultar por el producto: ${nombre}`
@@ -94,7 +102,7 @@ const categorias = [
 
       return (
         <article
-          class="product-card"
+          class={`product-card${esResaltado ? " product-card--highlighted" : ""}`}
           data-product-card
           data-category={categoria}
           data-search={searchText}
@@ -107,6 +115,10 @@ const categorias = [
                 <span>🐶</span>
                 <small>Imagen del producto</small>
               </div>
+            )}
+
+            {esResaltado && (
+              <span class="product-highlight-badge">Imperdible</span>
             )}
 
             <span class="product-status">{estado}</span>

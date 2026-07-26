@@ -5,4 +5,5 @@ precio: 25.999
 estado: Disponible
 categoria: Otros
 imagen: /uploads/drontal_plus.png
+resaltar: true
 ---

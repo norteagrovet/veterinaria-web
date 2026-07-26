@@ -33,7 +33,10 @@ const url = (path) => {
 
       <p class="eyebrow">Veterinaria urbana y rural</p>
 
-      <h1>Norte Agroveterinaria</h1>
+      <h1 class="home-brand-title">
+        <span class="home-brand-norte">NORTE</span>
+        <span class="home-brand-agroveterinaria">AGROVETERINARIA</span>
+      </h1>
 
       <p class="hero-text">
         Atención veterinaria para animales de compañía, visitas a campo y productos
@@ -53,7 +56,7 @@ const url = (path) => {
     <article>
       <span>🐶</span>
       <strong>Animales de compañía</strong>
-      <p>Atención para perros, gatos y mascotas.</p>
+      <p>Atención para perros, gatos y otras mascotas.</p>
     </article>
 
     <article>
@@ -65,26 +68,53 @@ const url = (path) => {
     <article>
       <span>🦴</span>
       <strong>Productos</strong>
-      <p>Accesorios, higiene, juguetes y más.</p>
+      <p>Medicamentos veterinarios para grandes y pequeños animales, accesorios, juguetes, higiene y más.</p>
     </article>
   </section>
 
-  <section class="section split-section">
-    <div>
+  <section class="section split-section home-about-section">
+    <div class="home-about-copy">
       <p class="eyebrow">Quiénes somos</p>
-      <h2>Cuidado cercano para animales y familias</h2>
+
+      <h2>Cuidado cercano para tus animales urbanos y rurales</h2>
+
       <p>
-        En Norte Agroveterinaria combinamos atención veterinaria, asesoramiento claro
-        y experiencia en el ámbito agropecuario. Trabajamos para acompañarte tanto
-        en el cuidado cotidiano de tus mascotas como en consultas vinculadas al campo.
+        En Norte Agroveterinaria combinamos experiencia, compromiso y cercanía
+        para acompañarte tanto en la producción como en el cuidado de tus
+        mascotas.
       </p>
 
-      <a class="button" href={url("nosotros")}>Conocenos</a>
+      <p>
+        Sabemos lo importante que es tu campo y trabajamos para que se
+        desarrolle al máximo. También entendemos que tus mascotas son
+        parte de tu familia, por lo que nos enfocamos en cuidar su salud
+        y bienestar.
+      </p>
+
+      <div class="home-about-highlights" aria-label="Experiencia y áreas de trabajo">
+        <div>
+          <strong>Más de 20 años</strong>
+          <span>de experiencia</span>
+        </div>
+
+        <div>
+          <strong>Pasión por</strong>
+          <span>el mundo agro</span>
+        </div>
+
+        <div>
+          <strong>Enfoque en</strong>
+          <span>el bienestar animal</span>
+        </div>
+      </div>
     </div>
 
-    <div class="image-placeholder home-about-photo">
-      <span>Placeholder imagen</span>
-      <small>Foto del equipo, local o atención veterinaria</small>
+    <div class="home-about-photo">
+      <img
+        src={url("uploads/fotos_decorativas/frente.jpeg")}
+        alt="Equipo de Norte Agroveterinaria"
+        loading="lazy"
+      />
     </div>
   </section>
 
@@ -94,7 +124,8 @@ const url = (path) => {
       <h2>Atención veterinaria urbana y rural</h2>
       <p>
         Una veterinaria pensada para acompañar distintas necesidades: desde controles
-        clínicos de perros y gatos hasta consultas relacionadas con animales de campo.
+        clínicos de perros y gatos hasta consultas relacionadas con animales de campo
+        y producción animal.
       </p>
     </div>
 
@@ -124,22 +155,36 @@ const url = (path) => {
   </section>
 
   <section class="section home-photo-strip">
-    <div class="photo-placeholder strip-large">
-      <span>Foto local</span>
-      <small>Fachada o interior</small>
+    <div class="home-strip-photo strip-large photo-local">
+      <img
+        src={url("uploads/fotos_decorativas/interior_2.jpeg")}
+        alt="Interior de Norte Agroveterinaria"
+        loading="lazy"
+      />
     </div>
 
-    <div class="photo-placeholder strip-tall">
-      <span>Foto campo</span>
-      <small>Animales rurales</small>
+    <div class="home-strip-photo strip-tall photo-campo">
+      <img
+        src={url("uploads/fotos_decorativas/gato_1.jpeg")}
+        alt="Animales en el campo"
+        loading="lazy"
+      />
     </div>
 
-    <div class="photo-placeholder strip-small">
-      <span>Foto productos</span>
+    <div class="home-strip-photo strip-small photo-productos">
+      <img
+        src={url("uploads/fotos_decorativas/productos_garrapatas.png")}
+        alt="Productos disponibles en Norte Agroveterinaria"
+        loading="lazy"
+      />
     </div>
 
-    <div class="photo-placeholder strip-small">
-      <span>Foto mascotas</span>
+    <div class="home-strip-photo strip-small photo-mascotas">
+      <img
+        src={url("uploads/fotos_decorativas/vacas_2.png")}
+        alt="Mascotas de Norte Agroveterinaria"
+        loading="lazy"
+      />
     </div>
   </section>
 
@@ -148,8 +193,8 @@ const url = (path) => {
       <p class="eyebrow">Productos</p>
       <h2>Productos para el cuidado diario</h2>
       <p>
-        En nuestro catálogo podés encontrar productos para mascotas y animales:
-        accesorios, juguetes, higiene y artículos seleccionados. Cada producto se
+        En nuestro catálogo podés encontrar productos para mascotas, animales de
+        campo, y relacionados al cuidado del hogar. Cada producto se
         puede consultar directamente por WhatsApp.
       </p>
 
@@ -157,10 +202,41 @@ const url = (path) => {
     </div>
 
     <div class="catalog-preview">
-      <div>Alimentos</div>
-      <div>Accesorios</div>
-      <div>Juguetes</div>
-      <div>Higiene</div>
+      <div class="catalog-preview-card catalog-alimentos">
+        <img
+          src={url("uploads/fotos_decorativas/alimento_balanceado.avif")}
+          alt="Alimentos para animales"
+          loading="lazy"
+        />
+        <span>Alimentos</span>
+      </div>
+
+      <div class="catalog-preview-card catalog-accesorios">
+        <img
+          src={url("uploads/fotos_decorativas/gato_pechera.jpg")}
+          alt="Accesorios para mascotas y animales"
+          loading="lazy"
+        />
+        <span>Accesorios</span>
+      </div>
+
+      <div class="catalog-preview-card catalog-juguetes">
+        <img
+          src={url("uploads/fotos_decorativas/perro_pelota.jpg")}
+          alt="Juguetes para mascotas"
+          loading="lazy"
+        />
+        <span>Juguetes</span>
+      </div>
+
+      <div class="catalog-preview-card catalog-higiene">
+        <img
+          src={url("uploads/fotos_decorativas/perro_jabon.webp")}
+          alt="Productos de higiene y cuidado animal"
+          loading="lazy"
+        />
+        <span>Higiene</span>
+      </div>
     </div>
   </section>
 
@@ -177,7 +253,7 @@ const url = (path) => {
         <a class="button" href={url("contacto")}>Ver contacto</a>
         <a
           class="button button-secondary"
-          href="https://www.google.com/maps/search/?api=1&query=Benjam%C3%ADn%20Zorrilla%204235%2C%20Resistencia%2C%20Chaco"
+          href="https://www.google.com/maps/place/Norte+Agroveterinaria/@-27.4053567,-58.9648337,1668m/data=!3m2!1e3!4b1!4m6!3m5!1s0x94450dd7687115ad:0x358ea368edac9b00!8m2!3d-27.4053615!4d-58.9622588!16s%2Fg%2F11z6727v9s?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"
           target="_blank"
         >
           Cómo llegar

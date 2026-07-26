@@ -42,23 +42,14 @@ content:
             - Accesorios
             - Juguetes
             - Higiene
+            - Medicamentos
             - Otros
+      
+      - name: resaltar
+        label: Resaltar
+        type: boolean
+        default: false
 
       - name: imagen
         label: Imagen
         type: image
-
-  - name: servicios
-    label: Servicios
-    type: collection
-    path: src/content/servicios
-    filename: "{fields.nombre}.md"
-    fields:
-      - name: nombre
-        label: Nombre
-        type: string
-        required: true
-
-      - name: descripcion
-        label: Descripción
-        type: text
