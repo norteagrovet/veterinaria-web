@@ -4,6 +4,14 @@ import Layout from "../layouts/Layout.astro";
 const servicios = Object.values(
   import.meta.glob("../content/servicios/*.md", { eager: true })
 );
+
+const base = import.meta.env.BASE_URL;
+
+const url = (path) => {
+  const cleanBase = base.endsWith("/") ? base : `${base}/`;
+  const cleanPath = path.replace(/^\/+/, "");
+  return `${cleanBase}${cleanPath}`;
+};
 ---
 
 <Layout title="Servicios">
@@ -24,7 +32,7 @@ const servicios = Object.values(
 
     <div class="services-photo">
       <img
-        src={`${import.meta.env.BASE_URL}uploads/fotos_decorativas/consultorio.jpeg`}
+        src={url("uploads/fotos_decorativas/consultorio.jpeg")}
         alt="Atención veterinaria de Norte Agroveterinaria"
         loading="lazy"
       />

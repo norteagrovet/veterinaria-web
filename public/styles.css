@@ -1884,3 +1884,18 @@ footer {
     ),
     var(--cream);
 }
+
+/* Corrección de Quiénes somos en celulares */
+
+@media (max-width: 820px) {
+  .home-about-section {
+    grid-template-columns: 1fr;
+  }
+
+  .home-about-photo {
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+    align-self: auto;
+  }
+}
